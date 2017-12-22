@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#888888"
+        >
+
+        <RelativeLayout
+            android:id="@+id/button_no_crop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:onClick="setQuadrangleToFullImage"
+                android:src="@drawable/ic_menu_no_crop"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/button_accept"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:onClick="select"
+                android:src="@drawable/ic_menu_accept"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.thegrizzlylabs.geniusscan.sdk.ui.BorderDetectionImageView
+        android:id="@+id/image_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/toolbar"
+        android:background="@android:color/black"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.thegrizzlylabs.geniusscan.sdk.ui.MagnifierView
+            android:id="@+id/magnifier_view"
+            android:layout_width="166dp"
+            android:layout_height="166dp"
+            />
+    </FrameLayout>
+</RelativeLayout>

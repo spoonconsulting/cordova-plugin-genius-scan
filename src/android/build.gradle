@@ -1,0 +1,12 @@
+allprojects {
+   repositories {
+      jcenter()
+      flatDir {
+        dirs 'libs'
+      }
+   }
+}
+
+dependencies {
+    compile(name:'gs-sdk', ext:'aar')
+}
