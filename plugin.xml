@@ -16,7 +16,7 @@
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
       <uses-feature android:name="android.hardware.screen.portrait" />
     </config-file>
-    <config-file parent="/manifest/application" target="AndroidManifest.xml">
+    <config-file parent="/manifest/application" target="app/src/main/AndroidManifest.xml">
       <meta-data android:value="$GSSDK_LICENCE_KEY" android:name="GSSDK_LICENCE_KEY"></meta-data>
       <activity android:configChanges="orientation" android:name="com.thegrizzlylabs.geniusscan.cordova.processing.BorderDetectionActivity" android:screenOrientation="portrait" />
       <activity android:configChanges="orientation" android:name="com.thegrizzlylabs.geniusscan.cordova.enhance.ImageProcessingActivity" android:screenOrientation="portrait" />
