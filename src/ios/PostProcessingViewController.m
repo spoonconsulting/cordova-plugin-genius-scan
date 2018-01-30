@@ -48,6 +48,8 @@
     [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Whiteboard", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self _processImageWithPostProcessingType:GSKPostProcessingTypeWhiteboard autoDetect:NO];
     }]];
+    alertController.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItems[1];
+    alertController.popoverPresentationController.sourceView = self.view;
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
