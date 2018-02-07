@@ -18,8 +18,8 @@
     </config-file>
     <config-file parent="/manifest/application" target="AndroidManifest.xml">
       <meta-data android:value="$GSSDK_LICENCE_KEY" android:name="GSSDK_LICENCE_KEY"></meta-data>
-      <activity android:configChanges="orientation" android:name="com.thegrizzlylabs.geniusscan.cordova.processing.BorderDetectionActivity" android:screenOrientation="portrait" />
-      <activity android:configChanges="orientation" android:name="com.thegrizzlylabs.geniusscan.cordova.enhance.ImageProcessingActivity" android:screenOrientation="portrait" />
+      <activity android:configChanges="orientation" android:name="com.thegrizzlylabs.geniusscan.cordova.processing.BorderDetectionActivity"  />
+      <activity android:configChanges="orientation" android:name="com.thegrizzlylabs.geniusscan.cordova.enhance.ImageProcessingActivity"  />
     </config-file>
     <source-file src="src/android/GeniusScan.java" target-dir="src/com/thegrizzlylabs/geniusscan/cordova" />
     <source-file src="src/android/model/Page.java" target-dir="src/com/thegrizzlylabs/geniusscan/cordova/model" />
