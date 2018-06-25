@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin id="cordova-plugin-genius-scan" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
   <name>Genius Scan</name>
@@ -16,10 +17,10 @@
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
       <uses-feature android:name="android.hardware.screen.portrait" />
     </config-file>
-    <config-file parent="/manifest/application" target="app/src/main/AndroidManifest.xml">
+    <config-file parent="/manifest/application" target="AndroidManifest.xml">
       <meta-data android:value="$GSSDK_LICENCE_KEY" android:name="GSSDK_LICENCE_KEY"></meta-data>
-      <activity android:configChanges="orientation" android:name="com.thegrizzlylabs.geniusscan.cordova.processing.BorderDetectionActivity" android:screenOrientation="portrait" />
-      <activity android:configChanges="orientation" android:name="com.thegrizzlylabs.geniusscan.cordova.enhance.ImageProcessingActivity" android:screenOrientation="portrait" />
+      <activity android:configChanges="orientation" android:name="com.thegrizzlylabs.geniusscan.cordova.processing.BorderDetectionActivity"  />
+      <activity android:configChanges="orientation" android:name="com.thegrizzlylabs.geniusscan.cordova.enhance.ImageProcessingActivity"  />
     </config-file>
     <source-file src="src/android/GeniusScan.java" target-dir="src/com/thegrizzlylabs/geniusscan/cordova" />
     <source-file src="src/android/model/Page.java" target-dir="src/com/thegrizzlylabs/geniusscan/cordova/model" />
@@ -30,15 +31,15 @@
     <source-file src="src/android/enhance/ImageProcessingActivity.java" target-dir="src/com/thegrizzlylabs/geniusscan/cordova/enhance" />
     <source-file src="src/android/enhance/EnhanceAsyncTask.java" target-dir="src/com/thegrizzlylabs/geniusscan/cordova/enhance" />
     <source-file src="src/android/enhance/RotateAsyncTask.java" target-dir="src/com/thegrizzlylabs/geniusscan/cordova/enhance" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_accept.png" target-dir="res/drawable-xhdpi" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_no_crop.png" target-dir="res/drawable-xhdpi" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_rotate_left.png" target-dir="res/drawable-xhdpi" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_rotate_right.png" target-dir="res/drawable-xhdpi" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_settings.png" target-dir="res/drawable-xhdpi" />
-    <source-file src="src/android/res/layout/image_processing_activity.xml" target-dir="res/layout" />
-    <source-file src="src/android/res/layout/border_detection_activity.xml" target-dir="res/layout" />
-    <source-file src="src/android/res/values/gs_colors.xml" target-dir="res/values" />
-    <source-file src="src/android/res/values/gs_strings.xml" target-dir="res/values" />
+     <resource-file src="src/android/res/drawable-xhdpi/ic_menu_accept.png" target="res/drawable-xhdpi/ic_menu_accept.png" />
+    <resource-file src="src/android/res/drawable-xhdpi/ic_menu_no_crop.png" target="res/drawable-xhdpi/ic_menu_no_crop.png" />
+    <resource-file src="src/android/res/drawable-xhdpi/ic_menu_rotate_left.png" target="res/drawable-xhdpi/ic_menu_rotate_left.png" />
+    <resource-file src="src/android/res/drawable-xhdpi/ic_menu_rotate_right.png" target="res/drawable-xhdpi/ic_menu_rotate_right.png" />
+    <resource-file src="src/android/res/drawable-xhdpi/ic_menu_settings.png" target="res/drawable-xhdpi/ic_menu_settings.png" />
+    <resource-file src="src/android/res/layout/image_processing_activity.xml" target="res/layout/image_processing_activity.xml" />
+    <resource-file src="src/android/res/layout/border_detection_activity.xml" target="res/layout/border_detection_activity.xml" />
+    <resource-file src="src/android/res/values/gs_colors.xml" target="res/values/gs_colors.xml" />
+    <resource-file src="src/android/res/values/gs_strings.xml" target="res/values/gs_strings.xml" />
     <source-file src="src/android/libs/gs-sdk.aar" target-dir="libs" />
     <framework custom="true" src="src/android/build.gradle" type="gradleReference" />
   </platform>
