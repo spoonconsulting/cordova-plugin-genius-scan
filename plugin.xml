@@ -40,7 +40,7 @@
     <resource-file src="src/android/res/layout/border_detection_activity.xml" target="res/layout/border_detection_activity.xml" />
     <resource-file src="src/android/res/values/gs_colors.xml" target="res/values/gs_colors.xml" />
     <resource-file src="src/android/res/values/gs_strings.xml" target="res/values/gs_strings.xml" />
-    <source-file src="src/android/libs/gs-sdk.aar" target-dir="app/src/main/libs" />
+    <source-file src="src/android/libs/gs-sdk.aar" target-dir="app/libs" />
     <framework custom="true" src="src/android/build.gradle" type="gradleReference" />
   </platform>
 
