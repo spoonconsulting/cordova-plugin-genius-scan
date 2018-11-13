@@ -44,7 +44,7 @@
 }
 
 - (void)cancelCallback {
-    CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_NO_RESULT messageAsString:@"Canceled"];
+    CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:nil];
 
     [self.commandDelegate sendPluginResult:result callbackId:self.callbackId];
 }
