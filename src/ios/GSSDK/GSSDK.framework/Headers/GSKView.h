@@ -36,6 +36,8 @@
 - (void)pausePreview;
 - (void)resumePreview;
 
+@property (nonatomic, readonly) UIView *previewView;
+
 /**
  The document frame layer
  */

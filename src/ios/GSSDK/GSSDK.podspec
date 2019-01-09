@@ -32,6 +32,4 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.vendored_frameworks = 'GSSDK.framework'
-  s.dependency 'OpenCV', '~> 3.1'
-
 end

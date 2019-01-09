@@ -9,7 +9,7 @@
 /**
  * Process the image and return a file path to the
  * updated image. The PDF processor will delete this temporary
- * image afterwards (only if it's different from @param input_file_path)
+ * image afterwards (only if it's different from input_file_path)
  * @return NULL if there is an error
  *
  */

@@ -1,0 +1,8 @@
+<resources>
+    <string name="enhancement_dialog_title">Aprimoramento</string>
+    <string name="image_type_none">Nenhuma</string>
+    <string name="image_type_photo">Foto</string>
+    <string name="image_type_color">Cor</string>
+    <string name="image_type_black_white">Preto e Branco</string>
+    <string name="capture">Tirar foto</string>
+</resources>

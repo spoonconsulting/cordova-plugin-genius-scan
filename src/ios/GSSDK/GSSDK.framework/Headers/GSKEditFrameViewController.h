@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class GSKEditFrameView;
 @class GSKQuadrangle;
 
 /**
@@ -33,7 +34,7 @@
 /**
  The view on which the quadrangle is drawn.
  */
-@property (nonatomic, readonly) UIView *frameView;
+@property (nonatomic, readonly) GSKEditFrameView *frameView;
 
 /**
  Customize the color of the shade within the quadrangle.

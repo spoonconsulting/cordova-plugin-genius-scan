@@ -2,9 +2,13 @@
 
 #import <Cordova/CDV.h>
 
-@interface GeniusScan : CDVPlugin {
+@interface GeniusScan : CDVPlugin
+{
   // Member variables go here.
 }
 
-- (void)scan:(CDVInvokedUrlCommand*)command;
+- (void)scanImage:(CDVInvokedUrlCommand *)command;
+- (void)scanCamera:(CDVInvokedUrlCommand *)command;
+- (void)setLicenceKey:(CDVInvokedUrlCommand *)command;
+- (void)generatePDF:(CDVInvokedUrlCommand *)command;
 @end

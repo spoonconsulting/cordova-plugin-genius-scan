@@ -1,0 +1,8 @@
+<resources>
+    <string name="enhancement_dialog_title">効果</string>
+    <string name="image_type_none">なし</string>
+    <string name="image_type_photo">写真</string>
+    <string name="image_type_color">カラー</string>
+    <string name="image_type_black_white">黒白</string>
+    <string name="capture">写真を撮影</string>
+</resources>

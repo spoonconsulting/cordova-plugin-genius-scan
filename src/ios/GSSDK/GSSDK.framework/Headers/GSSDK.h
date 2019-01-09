@@ -23,6 +23,8 @@ FOUNDATION_EXPORT const unsigned char GSSDKVersionString[];
 // UI
 #import <GSSDK/GSKCameraSession.h>
 #import <GSSDK/GSKCameraViewController.h>
+#import <GSSDK/GSKEditableFrame.h>
+#import <GSSDK/GSKEditFrameView.h>
 #import <GSSDK/GSKEditFrameViewController.h>
 #import <GSSDK/GSKShutterView.h>
 #import <GSSDK/GSKView.h>

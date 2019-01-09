@@ -16,6 +16,8 @@ extern const CGPoint GSKQuadrangleTopLeftPoint;
 extern const CGPoint GSKQuadrangleBottomLeftPoint;
 extern const CGPoint GSKQuadrangleBottomRightPoint;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Represents a quadrangular area of the photo, generally the document for which to correct
  the perspective.
@@ -31,6 +33,7 @@ extern const CGPoint GSKQuadrangleBottomRightPoint;
 + (GSKQuadrangle *)quadrangleFromCGRect:(CGRect)rect;
 - (BOOL)isEmpty;
 - (BOOL)isMax;
+- (BOOL)isConvex;
 
 @property (nonatomic, assign) CGPoint topLeft;
 @property (nonatomic, assign) CGPoint topRight;
@@ -67,3 +70,5 @@ extern const CGPoint GSKQuadrangleBottomRightPoint;
  */
 - (GSKQuadrangle *)sanitized;
 @end
+
+NS_ASSUME_NONNULL_END

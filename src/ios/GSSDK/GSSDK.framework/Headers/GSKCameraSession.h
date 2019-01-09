@@ -6,16 +6,13 @@
 //  Copyright (c) 2015 Bruno Virlet. All rights reserved.
 //
 
+#import <AVFoundation/AVFoundation.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 #import "GSKCameraTypes.h"
 #import "GSKScanProtocol.h"
 #import "GSKScanFactoryProtocol.h"
-
-@import AVFoundation;
-
-extern NSString *const GSCManagerTakePhotoOptionManualKey;
 
 @class GSKCaptureHandler;
 @class GSKQuadrangle;
@@ -44,15 +41,12 @@ typedef NS_ENUM(NSInteger, GSKCameraSessionError) {
 
 /**
  The delegate of GSKCameraSession must adopt the GSKCameraSessionDelegate protocol.
- 
+
  This protocol gives information about the state of the camera session, from configuration to snapping of photos.
+
+ There is no guarantee that these callbacks will be called on the main thread.
  */
 @protocol GSKCameraSessionDelegate <NSObject>
-
-/**
- The camera session setup finished successfully.
- */
-- (void)cameraSessionDidSetup:(GSKCameraSession *)cameraSession;
 
 /**
  The camera session setup finished with an error
@@ -81,7 +75,7 @@ typedef NS_ENUM(NSInteger, GSKCameraSessionError) {
 
 /**
  Camera session has finished processing the photo we just took
- 
+
  @param scan The scan object that has been generated
  */
 - (void)cameraSession:(GSKCameraSession *)cameraSession didGenerateScan:(id<GSKScanProtocol>)scan;
@@ -91,24 +85,34 @@ typedef NS_ENUM(NSInteger, GSKCameraSessionError) {
  */
 - (void)cameraSession:(GSKCameraSession *)cameraSession didFailWithError:(NSError *)error;
 
+@optional
+
 /**
- Identified quadrangle in last frame of photo stream
- 
+ The camera session setup finished successfully.
+
+ This is your chance to hook up into
+ the setup to change some params on the AVCaptureSession.
+
+ This callback is called on a specific queue where all the session calls are serialized.
+ */
+- (void)cameraSessionDidSetup:(GSKCameraSession *)cameraSession;
+
+/**
+ The camera session is still looking for a quadrangle
+ */
+- (void)cameraSessionIsSearchingQuadrangle:(GSKCameraSession *)cameraSession;
+
+/**
+ The camera session identified a quadrangle in last frame of photo stream
+
  @param quadrangle The quadrangle that has been found.
  */
 - (void)cameraSession:(GSKCameraSession *)cameraSession didFindQuadrangle:(GSKQuadrangle *)quadrangle;
 
-@optional
-
 /**
- Couldn't identify quadrangle in last frame of photo stream
+ The camera session couldn't identify quadrangle in last frame of photo stream
  */
 - (void)cameraSessionFailedToFindQuadrangle:(GSKCameraSession *)cameraSession;
-
-/**
- Camera session is going to automatically take the photo
- */
-- (void)cameraSession:(GSKCameraSession *)cameraSession willAutoTriggerWithQuadrangle:(GSKQuadrangle *)quadrangle;
 
 /**
  The camera session real-time quadrangle detection will soon validate the quadrangle
@@ -116,9 +120,9 @@ typedef NS_ENUM(NSInteger, GSKCameraSessionError) {
 - (void)cameraSessionIsAboutToChooseQuadrangle:(GSKCameraSession *)cameraSession;
 
 /**
- The camera session is still looking for a quadrangle
-*/
-- (void)cameraSessionisSearchingQuadrangle:(GSKCameraSession *)cameraSession;
+ The camera session is going to automatically take the photo
+ */
+- (void)cameraSession:(GSKCameraSession *)cameraSession willAutoTriggerWithQuadrangle:(GSKQuadrangle *)quadrangle;
 
 /**
  Camera session started running
@@ -147,9 +151,9 @@ typedef NS_ENUM(NSInteger, GSKCameraSessionError) {
 @interface GSKCameraSession : NSObject
 
 /**
- @param scanFactory An object generating a scan. 
+ @param scanFactory An object generating a scan.
 
- When a photo is generated, the camera session will generate an object implementing the GSKScanProtocol. 
+ When a photo is generated, the camera session will generate an object implementing the GSKScanProtocol.
  By passing in this factory, this lets you use your own concrete implementation of this object.
  */
 - (instancetype)initWithScanFactory:(id<GSKScanFactoryProtocol>)scanFactory NS_DESIGNATED_INITIALIZER;
@@ -160,7 +164,6 @@ typedef NS_ENUM(NSInteger, GSKCameraSessionError) {
 @property (nonatomic, readonly) AVCaptureDeviceInput *captureInput;
 @property (nonatomic, readonly) AVCaptureSession *captureSession;
 @property (nonatomic, readonly) AVCaptureConnection *captureConnection;
-@property (nonatomic, readonly) AVCaptureStillImageOutput *captureStillImageOutput;
 
 /**
  Preloads the camera so that it's ready to stream preview and take photo
@@ -180,7 +183,7 @@ typedef NS_ENUM(NSInteger, GSKCameraSessionError) {
 
 /**
  Change the flash status
- 
+
  @param flashStatus The new status for the flash
  @param successBlock The block called on success
  @param errorBlock The block called on error
@@ -189,13 +192,18 @@ typedef NS_ENUM(NSInteger, GSKCameraSessionError) {
 
 /**
  Manually take a photo
+
+ If autoTriggerEnabled is YES, the photo is taken automatically when the frame is detected.
+ Otherwise, if you want to let the user manually trigger the photo, you can use this method.
+
+ This method can be called even when autoTriggerEnabled and will force taking the photo.
  */
 - (void)takePhoto;
 
 /**
  True for the duration of taking the photo and processing it. Observable.
  */
-@property (nonatomic, assign, getter=isTakingPhoto) BOOL takingPhoto;
+@property (nonatomic, readonly, getter=isTakingPhoto) BOOL takingPhoto;
 
 /**
 Camera won't be used anymore in this session. Makes sure everything can be deallocated successfully.
@@ -206,7 +214,7 @@ Camera won't be used anymore in this session. Makes sure everything can be deall
 
 /**
  The camera session delegate.
- 
+
  @see GSKCameraSessionDelegate
  */
 @property (nonatomic, weak) id <GSKCameraSessionDelegate> delegate;

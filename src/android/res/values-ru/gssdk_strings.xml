@@ -1,0 +1,8 @@
+<resources>
+    <string name="enhancement_dialog_title">Преобразование</string>
+    <string name="image_type_none">Нет</string>
+    <string name="image_type_photo">Фото</string>
+    <string name="image_type_color">Цвет</string>
+    <string name="image_type_black_white">Ч/Б</string>
+    <string name="capture">Сделать снимок</string>
+</resources>

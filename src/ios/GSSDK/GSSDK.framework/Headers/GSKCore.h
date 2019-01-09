@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreMedia/CoreMedia.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class GSKQuadrangle;
 
 /**
@@ -53,11 +55,11 @@ typedef NS_OPTIONS(NSInteger, GSKDetectQuadrangleOptions) {
  Detects the quadrangle corresponding to the edges of a document in a photo
 
  @param image The photo to detect a document in
- @param @see GSKDetectQuadrangleOptions
+ @param options @see GSKDetectQuadrangleOptions
 
  @return the detected quadrangle. nil if there is no detected quadrangle.
  */
-+ (GSKQuadrangle *)detectQuadrangleFromImage:(UIImage *)image options:(GSKDetectQuadrangleOptions)options;
++ (GSKQuadrangle * _Nullable)detectQuadrangleFromImage:(UIImage *)image options:(GSKDetectQuadrangleOptions)options;
 
 /**
  Detects the quadrangle corresponding to the edges of a document in video frame
@@ -66,17 +68,19 @@ typedef NS_OPTIONS(NSInteger, GSKDetectQuadrangleOptions) {
  
  @return the detected quadrangle. nil if there is no detected quadrangle.
  */
-+ (GSKQuadrangle *)detectQuadrangleFromSampleBuffer:(CMSampleBufferRef)sampleBuffer;
++ (GSKQuadrangle * _Nullable)detectQuadrangleFromSampleBuffer:(CMSampleBufferRef)sampleBuffer;
 
 /**
  Extracts the document from the given photo and corrects its perspective
  
  @param image The original photo
- @param quadrangle The quadrangle representing the edges of the document
+ @param quadrangle The quadrangle representing the edges of the document. If nil, the entire image is returned.
  
- @return the cropped and perspective-corrected document
+ @return the cropped and perspective-corrected document. nil if there is an error.
+         Errors include: - non-convex quadrangle
+                         - failure to warp
  */
-+ (UIImage *)warpImage:(UIImage *)image withQuadrangle:(GSKQuadrangle *)quadrangle;
++ (UIImage * _Nullable)warpImage:(UIImage *)image withQuadrangle:(GSKQuadrangle * _Nullable)quadrangle;
 
 /**
  Determines the best image processing type for a document
@@ -91,10 +95,12 @@ typedef NS_OPTIONS(NSInteger, GSKDetectQuadrangleOptions) {
  Enhances a document image with the selected post processing type
  
  @param image the warped, perspective-corrected document
- @param the enhancement to apply to the image. @see GSKPostProcessingType
+ @param postProcessing the enhancement to apply to the image. @see GSKPostProcessingType
 
  @return the enhanced image
  */
 + (UIImage *)enhanceImage:(UIImage *)image withPostProcessing:(GSKPostProcessingType)postProcessing;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -1,0 +1,8 @@
+<resources>
+    <string name="enhancement_dialog_title">增強</string>
+    <string name="image_type_none">无</string>
+    <string name="image_type_photo">照片</string>
+    <string name="image_type_color">彩色</string>
+    <string name="image_type_black_white">黑白</string>
+    <string name="capture">拍照</string>
+</resources>

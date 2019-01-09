@@ -1,7 +1,35 @@
 {
-  "name": "cordova-plugin-genius-scan",
-  "version": "1.0.0",
-  "description": "Cordova Plugin for Genius Scan SDK",
+  "_from": "@thegrizzlylabs/cordova-plugin-genius-scan@^2.4.1",
+  "_id": "@thegrizzlylabs/cordova-plugin-genius-scan@2.4.1",
+  "_inBundle": false,
+  "_integrity": "sha512-DK8Y9S261b9bfvDuoQC80djelx90XNLgVr96Wb77YoUw5wWV/6udTXkT+hWgXanvQGYqODNvvhYJ0lb8No+tAQ==",
+  "_location": "/@thegrizzlylabs/cordova-plugin-genius-scan",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@thegrizzlylabs/cordova-plugin-genius-scan@^2.4.1",
+    "name": "@thegrizzlylabs/cordova-plugin-genius-scan",
+    "escapedName": "@thegrizzlylabs%2fcordova-plugin-genius-scan",
+    "scope": "@thegrizzlylabs",
+    "rawSpec": "^2.4.1",
+    "saveSpec": null,
+    "fetchSpec": "^2.4.1"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@thegrizzlylabs/cordova-plugin-genius-scan/-/cordova-plugin-genius-scan-2.4.1.tgz",
+  "_shasum": "fc2595d9e08ef0dec392d8f126406374f32ecb88",
+  "_spec": "@thegrizzlylabs/cordova-plugin-genius-scan@^2.4.1",
+  "_where": "/Users/mevindhunnooa/Documents/workspace/sharinpix-app",
+  "author": {
+    "name": "TheGrizzlyLabs",
+    "email": "sdk@thegrizzlylabs.com",
+    "url": "https://www.thegrizzlylabs.com/"
+  },
+  "bundleDependencies": false,
   "cordova": {
     "id": "cordova-plugin-genius-scan",
     "platforms": [
@@ -9,12 +37,43 @@
       "ios"
     ]
   },
+  "deprecated": false,
+  "description": "Cordova Plugin for Genius Scan SDK",
   "engines": {
     "cordovaDependencies": {
       "1.0.0": {
-        "cordova": ">6.4.0",
-        "cordova-ios": ">4.3.0"
+        "cordova": ">7.0.0",
+        "cordova-android": "^6.3.0",
+        "cordova-ios": "^4.3.0"
       }
     }
-  }
+  },
+  "homepage": "https://www.thegrizzlylabs.com/document-scanner-sdk/",
+  "keywords": [
+    "document scanner",
+    "document scanning",
+    "sdk",
+    "scanning api",
+    "camera",
+    "scanner",
+    "genius scan",
+    "document capture",
+    "document detection",
+    "edge detection",
+    "perspective correction",
+    "image cropping",
+    "image enhancement",
+    "image to pdf",
+    "pdf generator",
+    "opencv",
+    "cordova",
+    "plugin",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "ionic",
+    "the grizzly labs"
+  ],
+  "name": "@thegrizzlylabs/cordova-plugin-genius-scan",
+  "version": "2.4.1"
 }

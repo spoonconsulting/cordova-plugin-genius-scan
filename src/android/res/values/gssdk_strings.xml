@@ -1,0 +1,9 @@
+<resources>
+    <string name="enhancement_dialog_title">Enhancement</string>
+    <string name="image_type_none">None</string>
+    <string name="image_type_photo">Color</string>
+    <string name="image_type_color">Whiteboard</string>
+    <string name="image_type_black_white">Black &amp; White</string>
+    <string name="internal_error">GeniusScan cordova plugin internal error. Please contact support at sdk@thegrizzlylabs.com</string>
+    <string name="capture">Take photo</string>
+</resources>

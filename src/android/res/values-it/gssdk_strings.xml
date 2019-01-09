@@ -1,0 +1,8 @@
+<resources>
+    <string name="enhancement_dialog_title">Miglioramento</string>
+    <string name="image_type_none">Nessuno</string>
+    <string name="image_type_photo">Foto</string>
+    <string name="image_type_color">Colore</string>
+    <string name="image_type_black_white">Bianco e nero</string>
+    <string name="capture">Scatta foto</string>
+</resources>
