@@ -36,9 +36,6 @@
     <source-file src="src/android/geniusscan/enhance/PdfGenerationTask.java" target-dir="src/com/geniusscan/enhance" />
     <source-file src="src/android/geniusscan/enhance/RotateAsyncTask.java" target-dir="src/com/geniusscan/enhance" />
     <source-file src="src/android/geniusscan/camera/ScanActivity.java" target-dir="src/com/geniusscan/camera" />
-    <!-- <source-file src="src/android/res/drawable-hdpi/ic_launcher.png" target-dir="src/android/res/drawable-hdpi" />
-    <source-file src="src/android/res/drawable-mdpi/ic_launcher.png" target-dir="src/android/res/drawable-mdpi" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_launcher.png" target-dir="src/android/res/drawable-xhdpi" /> -->
     <source-file src="src/android/res/drawable-xhdpi/ic_menu_accept.png" target-dir="src/android/res/drawable-xhdpi" />
     <source-file src="src/android/res/drawable-xhdpi/ic_menu_no_crop.png" target-dir="src/android/res/drawable-xhdpi" />
     <source-file src="src/android/res/drawable-xhdpi/ic_menu_rotate_left.png" target-dir="src/android/res/drawable-xhdpi" />
@@ -58,7 +55,7 @@
     <source-file src="src/android/res/values-ru/gssdk_strings.xml" target-dir="res/values-ru" />
     <source-file src="src/android/res/values-zh-rCN/gssdk_strings.xml" target-dir="res/values-zh-rCN" />
     <source-file src="src/android/res/values-zh-rTW/gssdk_strings.xml" target-dir="res/values-zh-rTW" />
-    <resource-file src="src/android/libs/gs-sdk.aar" target="libs/gs-sdk.aar" />
+    <resource-file src="src/android/libs/gs-sdk.aar" target="app/libs/gs-sdk.aar" />
     <framework custom="true" src="src/android/build.gradle" type="gradleReference" />
     <framework src="com.android.support:support-v4:27.0.1"/>
   </platform>
