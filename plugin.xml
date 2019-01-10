@@ -36,14 +36,14 @@
     <source-file src="src/android/geniusscan/enhance/PdfGenerationTask.java" target-dir="src/com/geniusscan/enhance" />
     <source-file src="src/android/geniusscan/enhance/RotateAsyncTask.java" target-dir="src/com/geniusscan/enhance" />
     <source-file src="src/android/geniusscan/camera/ScanActivity.java" target-dir="src/com/geniusscan/camera" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_accept.png" target-dir="src/android/res/drawable-xhdpi" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_no_crop.png" target-dir="src/android/res/drawable-xhdpi" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_rotate_left.png" target-dir="src/android/res/drawable-xhdpi" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_rotate_right.png" target-dir="src/android/res/drawable-xhdpi" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_settings.png" target-dir="src/android/res/drawable-xhdpi" />
-    <source-file src="src/android/res/layout/image_processing_activity.xml" target-dir="src/android/res/layout" />
-    <source-file src="src/android/res/layout/border_detection_activity.xml" target-dir="src/android/res/layout" />
-    <source-file src="src/android/res/layout/scanning_activity.xml" target-dir="src/android/res/layout" />
+    <source-file src="src/android/res/drawable-xhdpi/ic_menu_accept.png" target-dir="app/src/main/res/drawable-xhdpi" />
+    <source-file src="src/android/res/drawable-xhdpi/ic_menu_no_crop.png" target-dir="app/src/main/res/drawable-xhdpi" />
+    <source-file src="src/android/res/drawable-xhdpi/ic_menu_rotate_left.png" target-dir="app/src/main/res/drawable-xhdpi" />
+    <source-file src="src/android/res/drawable-xhdpi/ic_menu_rotate_right.png" target-dir="app/src/main/res/drawable-xhdpi" />
+    <source-file src="src/android/res/drawable-xhdpi/ic_menu_settings.png" target-dir="app/src/main/res/drawable-xhdpi" />
+    <source-file src="src/android/res/layout/image_processing_activity.xml" target-dir="res/layout" />
+    <source-file src="src/android/res/layout/border_detection_activity.xml" target-dir="res/layout" />
+    <source-file src="src/android/res/layout/scanning_activity.xml" target-dir="res/layout" />
     <source-file src="src/android/res/values/gssdk_colors.xml" target-dir="res/values" />
     <source-file src="src/android/res/values/gssdk_strings.xml" target-dir="res/values" />
     <source-file src="src/android/res/values-de/gssdk_strings.xml" target-dir="res/values-de" />
@@ -55,7 +55,7 @@
     <source-file src="src/android/res/values-ru/gssdk_strings.xml" target-dir="res/values-ru" />
     <source-file src="src/android/res/values-zh-rCN/gssdk_strings.xml" target-dir="res/values-zh-rCN" />
     <source-file src="src/android/res/values-zh-rTW/gssdk_strings.xml" target-dir="res/values-zh-rTW" />
-    <resource-file src="src/android/libs/gs-sdk.aar" target="app/libs/gs-sdk.aar" />
+    <source-file src="src/android/libs/gs-sdk.aar" target-dir="app/libs" />
     <framework custom="true" src="src/android/build.gradle" type="gradleReference" />
     <framework src="com.android.support:support-v4:27.0.1"/>
   </platform>
