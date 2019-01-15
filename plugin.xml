@@ -87,7 +87,7 @@
     <source-file src="src/ios/GSSDK-UI/UIImage-Extensions.m" />
     <source-file src="src/ios/GSSDK-UI/UIImage-Extensions.h" />
     <resource-file src="src/ios/GSPluginImages.xcassets" />
-    <resource-file src="src/ios/localized/de.lproj" />
+    <!--<resource-file src="src/ios/localized/de.lproj" />
     <resource-file src="src/ios/localized/en.lproj" />
     <resource-file src="src/ios/localized/es.lproj" />
     <resource-file src="src/ios/localized/fr.lproj" />
@@ -96,7 +96,7 @@
     <resource-file src="src/ios/localized/pt-BR.lproj" />
     <resource-file src="src/ios/localized/ru.lproj" />
     <resource-file src="src/ios/localized/zh-Hans.lproj" />
-    <resource-file src="src/ios/localized/zh-Hant.lproj" />
+    <resource-file src="src/ios/localized/zh-Hant.lproj" />-->
 
     <framework src="src/ios/GSSDK/GSSDK.framework" custom="true" embed="true" link="true" />
 
