@@ -35,7 +35,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+    self.navigationItem.leftBarButtonItems = @[
+                                                [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(_cancel)],
+                                                ];
 }
 
 #pragma mark - Views
@@ -110,6 +112,10 @@
                                 [NSLayoutConstraint constraintWithItem:self.cameraButton attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.toolbar attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:0.0f],
                                 [NSLayoutConstraint constraintWithItem:self.cameraButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.toolbar attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.0f]
                                 ]];
+}
+
+- (void)_cancel {
+    [self.delegate viewControllerDidCancel:self];
 }
 
 @end

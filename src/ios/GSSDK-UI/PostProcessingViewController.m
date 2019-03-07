@@ -35,6 +35,8 @@
         [self _processImageWithPostProcessingType:GSKPostProcessingTypeColor autoDetect:NO];
     else if ([self.defaultEnhancement isEqual: @"whiteboard"])
         [self _processImageWithPostProcessingType:GSKPostProcessingTypeWhiteboard autoDetect:NO];
+    else if ([self.defaultEnhancement isEqual: @"none"])
+        [self _processImageWithPostProcessingType:GSKPostProcessingTypeNone autoDetect:NO];
     else
         [self _processImageWithPostProcessingType:GSKPostProcessingTypeNone autoDetect:YES];
 }

@@ -79,6 +79,8 @@ public class Page implements ScanContainer, Parcelable {
             return ImageType.BLACK_WHITE;
         } else if (defaultEnhancement.equals("whiteboard")) {
             return ImageType.WHITEBOARD;
+        } else if (defaultEnhancement.equals("none")) {
+            return ImageType.NONE;
         }
 
         return null;

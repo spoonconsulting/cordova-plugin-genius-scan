@@ -46,6 +46,7 @@
 
     EditFrameViewController *editFrameViewController = [[EditFrameViewController alloc] init];
     editFrameViewController.scan = scan;
+    editFrameViewController.showCancel = YES;
 
     ScanNavigationController *scanNavigationController = [[ScanNavigationController alloc] initWithRootViewController:editFrameViewController resolver:resolveBlock rejecter:rejectBlock scanOptions:scanOptions];
 
@@ -57,6 +58,10 @@
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController resolver:(PromiseResolveBlock)resolveBlock rejecter:(PromiseRejectBlock)rejectBlock scanOptions:(NSDictionary *)scanOptions {
 
     self = [super initWithRootViewController:rootViewController];
+
+    rootViewController.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+    rootViewController.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    rootViewController.navigationController.navigationBar.translucent = NO;
 
     if (self) {
         _resolveBlock = resolveBlock;
@@ -75,17 +80,17 @@
     [self pushViewController:editFrameViewController animated:YES];
 }
 
+- (void)viewControllerDidCancel:(UIViewController *)viewController {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    self.rejectBlock(@"canceled", @"Canceled", nil);
+}
+
 - (void)editFrameViewController:(EditFrameViewController *)editFrameViewController didFinishWithScan:(Scan *)scan {
     PostProcessingViewController *postProcessingViewController = [[PostProcessingViewController alloc] init];
     postProcessingViewController.delegate = self;
     postProcessingViewController.scan = scan;
     postProcessingViewController.defaultEnhancement = self.scanOptions[@"defaultEnhancement"];
     [self pushViewController:postProcessingViewController animated:YES];
-}
-
-- (void)editFrameViewController:(EditFrameViewController *)editFrameViewController didCancelWithScan:(Scan *)scan {
-    [self dismissViewControllerAnimated:YES completion:nil];
-    self.rejectBlock(@"canceled", @"Canceled", nil);
 }
 
 - (void)postProcessingViewController:(id)postProcessingViewController didFinishWithScan:(Scan *)scan {

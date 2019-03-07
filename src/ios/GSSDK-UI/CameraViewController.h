@@ -13,6 +13,7 @@
 
 @protocol CameraViewControllerDelegate
 - (void)cameraViewController:(CameraViewController *)cameraViewController didFinishWithScan:(Scan *)scan;
+- (void)viewControllerDidCancel:(UIViewController *)viewController;
 @end
 
 /**

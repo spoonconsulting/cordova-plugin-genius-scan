@@ -20,6 +20,7 @@ exports.setLicenceKey = function(licenceKey, onSuccess, onError) {
   exec(onSuccess, onError, "GeniusScan", "setLicenceKey", [licenceKey]);
 };
 
+exports.ENHANCEMENT_NONE = 'none'
 exports.ENHANCEMENT_BW = 'bw'
 exports.ENHANCEMENT_PHOTO = 'color'
 exports.ENHANCEMENT_COLOR = 'whiteboard'

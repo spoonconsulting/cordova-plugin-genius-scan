@@ -18,7 +18,9 @@ import android.widget.Button;
 import com.thegrizzlylabs.geniusscan.sdk.camera.CameraManager;
 import com.thegrizzlylabs.geniusscan.sdk.camera.FocusIndicator;
 import com.thegrizzlylabs.geniusscan.sdk.camera.ScanFragment;
+import com.thegrizzlylabs.geniusscan.sdk.camera.realtime.BorderDetector;
 import com.thegrizzlylabs.geniusscan.sdk.core.GeniusScanLibrary;
+import com.thegrizzlylabs.geniusscan.sdk.core.QuadrangleAnalyzeResult;
 import com.thegrizzlylabs.geniusscan.sdk.core.RotationAngle;
 import com.thegrizzlylabs.geniusscan.sdk.core.ScanContainer;
 
@@ -50,7 +52,7 @@ public class ScanActivity extends FragmentActivity implements ScanFragment.Camer
       captureButton.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View v) {
-            scanFragment.takePicture(page);
+            takePicture();
          }
       });
 
@@ -61,6 +63,18 @@ public class ScanActivity extends FragmentActivity implements ScanFragment.Camer
       scanFragment.setPreviewAspectFill(false);
       scanFragment.setRealTimeDetectionEnabled(true);
       scanFragment.setFocusIndicator(focusIndicator);
+      scanFragment.setAutoTriggerAnimationEnabled(true);
+      scanFragment.setBorderDetectorListener(new BorderDetector.BorderDetectorListener() {
+         @Override
+         public void onTriggerRequested() {
+            takePicture();
+         }
+
+         @Override
+         public void onBorderDetectionResult(QuadrangleAnalyzeResult result) {
+
+         }
+      });
 
       page = getIntent().getParcelableExtra(GeniusScanSdkUI.EXTRA_PAGE);
 
@@ -83,6 +97,10 @@ public class ScanActivity extends FragmentActivity implements ScanFragment.Camer
    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
       cameraPermissionGranted = requestCode == PERMISSION_REQUEST_CODE && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
       // Camera will be initialized in onResume
+   }
+
+   private void takePicture() {
+      scanFragment.takePicture(page);
    }
 
    @Override

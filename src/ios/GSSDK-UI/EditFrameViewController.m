@@ -15,9 +15,13 @@
     self.navigationController.navigationBar.translucent = NO;
     [self.navigationController setNavigationBarHidden:NO animated:NO];
 
+    if (self.showCancel) {
+        self.navigationItem.leftBarButtonItems = @[
+           [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(_cancel)]];
+    }
+
     self.navigationItem.rightBarButtonItems = @[
-        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(_done)],
-        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(_cancel)],
+        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(_done)]
     ];
 
     if (self.scan.quadrangle != nil) {
@@ -45,8 +49,7 @@
 }
 
 - (void)_cancel {
-    [self dismissViewControllerAnimated:YES completion:nil];
-    [self.delegate editFrameViewController:self didCancelWithScan:self.scan];
+    [self.delegate viewControllerDidCancel:self];
 }
 
 @end

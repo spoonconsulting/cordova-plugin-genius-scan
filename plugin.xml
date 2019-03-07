@@ -36,25 +36,28 @@
     <source-file src="src/android/geniusscan/enhance/PdfGenerationTask.java" target-dir="src/com/geniusscan/enhance" />
     <source-file src="src/android/geniusscan/enhance/RotateAsyncTask.java" target-dir="src/com/geniusscan/enhance" />
     <source-file src="src/android/geniusscan/camera/ScanActivity.java" target-dir="src/com/geniusscan/camera" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_accept.png" target-dir="app/src/main/res/drawable-xhdpi" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_no_crop.png" target-dir="app/src/main/res/drawable-xhdpi" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_rotate_left.png" target-dir="app/src/main/res/drawable-xhdpi" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_rotate_right.png" target-dir="app/src/main/res/drawable-xhdpi" />
-    <source-file src="src/android/res/drawable-xhdpi/ic_menu_settings.png" target-dir="app/src/main/res/drawable-xhdpi" />
-    <source-file src="src/android/res/layout/image_processing_activity.xml" target-dir="res/layout" />
-    <source-file src="src/android/res/layout/border_detection_activity.xml" target-dir="res/layout" />
-    <source-file src="src/android/res/layout/scanning_activity.xml" target-dir="res/layout" />
-    <source-file src="src/android/res/values/gssdk_colors.xml" target-dir="res/values" />
-    <source-file src="src/android/res/values/gssdk_strings.xml" target-dir="res/values" />
-    <source-file src="src/android/res/values-de/gssdk_strings.xml" target-dir="res/values-de" />
-    <source-file src="src/android/res/values-es/gssdk_strings.xml" target-dir="res/values-es" />
-    <source-file src="src/android/res/values-fr/gssdk_strings.xml" target-dir="res/values-fr" />
-    <source-file src="src/android/res/values-it/gssdk_strings.xml" target-dir="res/values-it" />
-    <source-file src="src/android/res/values-ja/gssdk_strings.xml" target-dir="res/values-ja" />
-    <source-file src="src/android/res/values-pt-rBR/gssdk_strings.xml" target-dir="res/values-pt-rBR" />
-    <source-file src="src/android/res/values-ru/gssdk_strings.xml" target-dir="res/values-ru" />
-    <source-file src="src/android/res/values-zh-rCN/gssdk_strings.xml" target-dir="res/values-zh-rCN" />
-    <source-file src="src/android/res/values-zh-rTW/gssdk_strings.xml" target-dir="res/values-zh-rTW" />
+    <resource-file src="src/android/res/drawable-hdpi/ic_launcher.png" target="res/drawable-hdpi/ic_launcher.png" />
+    <resource-file src="src/android/res/drawable-mdpi/ic_launcher.png" target="res/drawable-mdpi/ic_launcher.png" />
+    <resource-file src="src/android/res/drawable-xhdpi/ic_launcher.png" target="res/drawable-xhdpi/ic_launcher.png" />
+    <resource-file src="src/android/res/drawable-xhdpi/ic_menu_accept.png" target="res/drawable-xhdpi/ic_menu_accept.png" />
+    <resource-file src="src/android/res/drawable-xhdpi/ic_menu_no_crop.png" target="res/drawable-xhdpi/ic_menu_no_crop.png" />
+    <resource-file src="src/android/res/drawable-xhdpi/ic_menu_rotate_left.png" target="res/drawable-xhdpi/ic_menu_rotate_left.png" />
+    <resource-file src="src/android/res/drawable-xhdpi/ic_menu_rotate_right.png" target="res/drawable-xhdpi/ic_menu_rotate_right.png" />
+    <resource-file src="src/android/res/drawable-xhdpi/ic_menu_settings.png" target="res/drawable-xhdpi/ic_menu_settings.png" />
+    <resource-file src="src/android/res/layout/image_processing_activity.xml" target="res/layout/image_processing_activity.xml" />
+    <resource-file src="src/android/res/layout/border_detection_activity.xml" target="res/layout/border_detection_activity.xml" />
+    <resource-file src="src/android/res/layout/scanning_activity.xml" target="res/layout/scanning_activity.xml" />
+    <resource-file src="src/android/res/values/gssdk_colors.xml" target="res/valuess/gssdk_colors.xml" />
+    <resource-file src="src/android/res/values/gssdk_strings.xml" target="res/values/gssdk_strings.xml" />
+    <resource-file src="src/android/res/values-de/gssdk_strings.xml" target="res/values-de/gssdk_strings.xml" />
+    <resource-file src="src/android/res/values-es/gssdk_strings.xml" target="res/values-es/gssdk_strings.xml" />
+    <resource-file src="src/android/res/values-fr/gssdk_strings.xml" target="res/values-fr/gssdk_strings.xml" />
+    <resource-file src="src/android/res/values-it/gssdk_strings.xml" target="res/values-it/gssdk_strings.xml" />
+    <resource-file src="src/android/res/values-ja/gssdk_strings.xml" target="res/values-ja/gssdk_strings.xml" />
+    <resource-file src="src/android/res/values-pt-rBR/gssdk_strings.xml" target="res/values-pt-rBR/gssdk_strings.xml" />
+    <resource-file src="src/android/res/values-ru/gssdk_strings.xml" target="res/values-ru/gssdk_strings.xml" />
+    <resource-file src="src/android/res/values-zh-rCN/gssdk_strings.xml" target="res/values-zh-rCN/gssdk_strings.xml" />
+    <resource-file src="src/android/res/values-zh-rTW/gssdk_strings.xml" target="res/values-zh-rTW/gssdk_strings.xml" />
     <source-file src="src/android/libs/gs-sdk.aar" target-dir="app/libs" />
     <framework custom="true" src="src/android/build.gradle" type="gradleReference" />
     <framework src="com.android.support:support-v4:27.0.1"/>
@@ -87,7 +90,7 @@
     <source-file src="src/ios/GSSDK-UI/UIImage-Extensions.m" />
     <source-file src="src/ios/GSSDK-UI/UIImage-Extensions.h" />
     <resource-file src="src/ios/GSPluginImages.xcassets" />
-    <!--<resource-file src="src/ios/localized/de.lproj" />
+    <!-- <resource-file src="src/ios/localized/de.lproj" />
     <resource-file src="src/ios/localized/en.lproj" />
     <resource-file src="src/ios/localized/es.lproj" />
     <resource-file src="src/ios/localized/fr.lproj" />
@@ -96,7 +99,7 @@
     <resource-file src="src/ios/localized/pt-BR.lproj" />
     <resource-file src="src/ios/localized/ru.lproj" />
     <resource-file src="src/ios/localized/zh-Hans.lproj" />
-    <resource-file src="src/ios/localized/zh-Hant.lproj" />-->
+    <resource-file src="src/ios/localized/zh-Hant.lproj" /> -->
 
     <framework src="src/ios/GSSDK/GSSDK.framework" custom="true" embed="true" link="true" />
 

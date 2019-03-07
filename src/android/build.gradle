@@ -2,7 +2,7 @@ allprojects {
    repositories {
       jcenter()
       flatDir {
-        dirs 'libs'
+        dirs 'libs', 'app/libs' /* for android-cordova 6.x */
       }
    }
 }

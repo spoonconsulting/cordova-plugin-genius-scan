@@ -28,8 +28,7 @@ This plugin requires `cordova-cli` above 7.0.0: see [this page](https://cordova.
 
 - **iOS**: `cordova-ios` above 4.3.0
   Nothing to do on a new project; use `cordova platform update ios --save` within your existing cordova project to upgrade it.
-- **Android**: `cordova-android` 6.x.x
-  The plugin is not compatible with Cordova Android 7.x.x because of structural changes ([details](https://cordova.apache.org/announcements/2017/12/04/cordova-android-7.0.0.html)).
+- **Android**: `cordova-android` at least 6.x.x
 
 **Note for Xcode 10 users**: [Cordova-ios is not fully compatible with Xcode 10 yet](https://github.com/apache/cordova-ios/issues/407), you may need to use `cordova run ios --buildFlag="-UseModernBuildSystem=0"` command to build the project properly
 
@@ -142,7 +141,7 @@ cordova.plugins.GeniusScan.generatePDF(imageFileUris, onSuccess, onFail, pdfOpti
 
 | Param | Type | Description |
 | --- | --- | --- |
-| scanOptions.defaultEnhancement | String | Force a specific image enhancement by default. Accepted values: `cordova.plugins.GeniusScan.ENHANCEMENT_BW`, `cordova.plugins.GeniusScan.ENHANCEMENT_COLOR`, `cordova.plugins.GeniusScan.ENHANCEMENT_PHOTO` |
+| scanOptions.defaultEnhancement | String | Force a specific image enhancement by default. Accepted values: `cordova.plugins.GeniusScan.ENHANCEMENT_NONE`, `cordova.plugins.GeniusScan.ENHANCEMENT_BW`, `cordova.plugins.GeniusScan.ENHANCEMENT_COLOR`, `cordova.plugins.GeniusScan.ENHANCEMENT_PHOTO` |
 
 ### Error callback
 
@@ -173,3 +172,42 @@ export class HomePage {
 
 ```
 
+# FAQ
+
+## What if I get a validation error from App Store Connect?
+
+You must remove the x86_64 and i386 slices before submitting your application to the App Store. They are only used for the iOS smiulator and iTunes rejects any binary that contains non-ARM slices.
+
+They can stripped out with a script like [this one](https://stackoverflow.com/a/42642209/1644052).
+
+## What should I do if my license is invalid?
+
+Make sure you have an ongoing contract with us. Contact us at sdk@thegrizzlylabs.com for any information.
+
+# Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [2.4.2] - 2019-02-27
+### Changed
+- Compatibility with android-cordova >= v7.0.0
+
+### Added
+- `ENHANCEMENT_NONE` default enhancement option
+- Cancel button on iOS camera screen
+- Auto trigger in Android
+
+## [2.4.1] - 2018-12-05
+### Changed
+- Fix README
+
+## [2.4.0] - 2018-12-05
+### Added
+- PDF generation with `generatePDF`
+- Selecting an enhancement type by default with `defaultEnhancement` option
+
+### Changed
+- Fix crash on ipad when clicking "Edit" button
+- Fix error with too long activity result code
