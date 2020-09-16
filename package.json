@@ -25,9 +25,9 @@
   "_spec": "@thegrizzlylabs/cordova-plugin-genius-scan@^2.4.2",
   "_where": "/Users/mevindhunnooa/Documents/workspace/sharinpix-app",
   "author": {
-    "name": "TheGrizzlyLabs",
-    "email": "sdk@thegrizzlylabs.com",
-    "url": "https://www.thegrizzlylabs.com/"
+    "name": "TheGrizzlyLabs & spoonconsulting",
+    "email": "mobile@sc-mauritius.com",
+    "url": "https://github.com/spoonconsulting"
   },
   "bundleDependencies": false,
   "cordova": {
@@ -43,12 +43,12 @@
     "cordovaDependencies": {
       "1.0.0": {
         "cordova": ">7.0.0",
-        "cordova-android": "^6.3.0",
-        "cordova-ios": "^4.3.0"
+        "cordova-android": ">6.3.0",
+        "cordova-ios": ">4.3.0"
       }
     }
   },
-  "homepage": "https://www.thegrizzlylabs.com/document-scanner-sdk/",
+  "homepage": "https://github.com/spoonconsulting/cordova-plugin-genius-scan",
   "keywords": [
     "document scanner",
     "document scanning",
@@ -72,8 +72,9 @@
     "cordova-android",
     "cordova-ios",
     "ionic",
-    "the grizzly labs"
+    "the grizzly labs",
+    "spoonconsulting"
   ],
-  "name": "@thegrizzlylabs/cordova-plugin-genius-scan",
+  "name": "@spoonconsulting/cordova-plugin-genius-scan",
   "version": "2.4.6"
 }
