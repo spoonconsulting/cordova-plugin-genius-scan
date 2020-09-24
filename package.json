@@ -1,6 +1,6 @@
 {
-  "_from": "@thegrizzlylabs/cordova-plugin-genius-scan@^2.4.2",
-  "_id": "@thegrizzlylabs/cordova-plugin-genius-scan@2.4.2",
+  "_from": "@thegrizzlylabs/cordova-plugin-genius-scan@^3.0.24",
+  "_id": "@thegrizzlylabs/cordova-plugin-genius-scan@3.0.24",
   "_inBundle": false,
   "_integrity": "sha512-h8eVi5eowtkdsg+UdITcs19BvsXZ9eldNYc07GABP6meBK6PmY4L5Dqi+M5LzbFAwzMRd4Rg5PB9vtSzzjHaGw==",
   "_location": "/@thegrizzlylabs/cordova-plugin-genius-scan",
@@ -8,21 +8,21 @@
   "_requested": {
     "type": "range",
     "registry": true,
-    "raw": "@thegrizzlylabs/cordova-plugin-genius-scan@^2.4.2",
+    "raw": "@thegrizzlylabs/cordova-plugin-genius-scan@^3.0.24",
     "name": "@thegrizzlylabs/cordova-plugin-genius-scan",
     "escapedName": "@thegrizzlylabs%2fcordova-plugin-genius-scan",
     "scope": "@thegrizzlylabs",
-    "rawSpec": "^2.4.2",
+    "rawSpec": "^3.0.24",
     "saveSpec": null,
-    "fetchSpec": "^2.4.2"
+    "fetchSpec": "^3.0.24"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@thegrizzlylabs/cordova-plugin-genius-scan/-/cordova-plugin-genius-scan-2.4.2.tgz",
+  "_resolved": "https://registry.npmjs.org/@thegrizzlylabs/cordova-plugin-genius-scan/-/cordova-plugin-genius-scan-3.0.24.tgz",
   "_shasum": "9f2166db98c7d2f82219dc73b85419e6bbfa4b81",
-  "_spec": "@thegrizzlylabs/cordova-plugin-genius-scan@^2.4.2",
+  "_spec": "@thegrizzlylabs/cordova-plugin-genius-scan@^3.0.24",
   "_where": "/Users/mevindhunnooa/Documents/workspace/sharinpix-app",
   "author": {
     "name": "TheGrizzlyLabs & spoonconsulting",
@@ -76,5 +76,5 @@
     "spoonconsulting"
   ],
   "name": "@spoonconsulting/cordova-plugin-genius-scan",
-  "version": "2.4.6"
+  "version": "3.0.0"
 }
